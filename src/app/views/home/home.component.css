@@ -1,8 +1,41 @@
-div.main{
-    border-width:2px;
-border-style:solid;
-border-color:rgb(176, 64, 64);
+body.main{
 text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
+  
+    height: 80vh;
+    justify-content: space-between;
+    
+   
 }
+
+div.title{
+    background: url(
+        'http://localhost:46599/assets/landscape.jpg');
+         
+                
+    background-image: "";
+    min-height: 20%;
+    place-content: center;
+
+
+}
+div.add_copy{
+    min-height: 40%;
+    place-content: center;
+
+}
+div.submit_form{
+
+    min-height: 40%;
+
+    place-content: center;
+    
+
+}
+
+li {
+    list-style: none;
+  }
+
+  h2 {
+margin:0;
+  }
