@@ -1,0 +1,13 @@
+div.footer{
+    background-color: purple;
+    bottom:0;
+    left: 0;
+position: relative;  
+width: 100%;
+    min-height: 5vh
+}
+p.copyright{
+    
+    line-height: 5vh;
+    color: rgb(105, 105, 105);
+}
