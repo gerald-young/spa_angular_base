@@ -1,16 +1,15 @@
 div.main{
-text-align: center;
-    justify-content: space-between;
+    text-align: center;
     display: block;
+    padding-top: 75px;
     height: 100vh;
-    padding-top: 5vh;
 }
 
 div.title{
     background: url(
-        'https://gerald-young.github.io/spa_angular_base/assets/landscape.jpg');
+        'https://gerald-young.github.io/spa_angular_base/assets/serverRoom.jpg');
          
-                
+          
     background-image: "";
     min-height: 20%;
     place-content: center;
@@ -18,13 +17,13 @@ div.title{
 
 }
 div.add_copy{
-    min-height: 40%;
+    min-height: 40vh;
     place-content: center;
 
 }
 div.submit_form{
 
-    min-height: 40%;
+    min-height: 40vh;
 
     place-content: center;
     

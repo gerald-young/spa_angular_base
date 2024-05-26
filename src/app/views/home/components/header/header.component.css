@@ -1,8 +1,9 @@
 div.header{
-    background-color: purple;
+    background-color: rgb(50, 170, 190);
     top:0;
     left: 0;
 position: fixed;  
 width: 100%;
-    min-height: 5vh;
+    min-height: 75px;
+    
 }
