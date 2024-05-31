@@ -1,5 +1,14 @@
-form.emailForm{
-    border: 3px solid #f1f1f1;
+
+
+div.email-submit-button{
+    margin: 10px;
+}
+div.form-field{
+    margin: 10px;
+
 }
 
+div.submit-button{
+    padding: 10px;
+}
 

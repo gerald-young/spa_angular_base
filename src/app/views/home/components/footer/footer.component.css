@@ -2,11 +2,11 @@ div.footer{
     background-color: rgb(50, 170, 190);
     bottom:0;
     left: 0;
-position: relative;  
+position: absolute;  
 width: 100%;
-min-height: 75px;
+min-height: 50px;
 }
 p.copyright{
-    
+    line-height: 50px;
     color: rgb(105, 105, 105);
 }

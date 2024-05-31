@@ -1,46 +1,42 @@
 <form [formGroup]="emailForm" class="emailForm">
-  
-      <label>Service request</label>
-      <div formGroupName="services">
-        
-        <h2>Services:</h2>
-        <input id="service_lawnMowing" type="checkbox" formControlName="services_lm">
-        <label>lawn mowing:</label> <br/>
-        <input id="service_lawnEdging" type="checkbox" formControlName="service_lawnEdging">
-        <label>lawn edging:</label> <br/>
-        <input id="service_rockWall" type="checkbox" formControlName="service_rockWall">
-        <label>rock wall:</label> <br/>
-        <input id="service_bushMunch" type="checkbox" formControlName="service_bushMunch">
-        <label>bush munching:</label> <br/>
-        <input id="service_treeTrim" type="checkbox" formControlName="service_treeTrim">
-        <label>tree triming:</label> <br/>
-        <input id="service_garden" type="checkbox" formControlName="service_garden">
-        <label>gardening:</label> <br/>
+  <div class="form-field" formArrayName="services">
+    @for (service of services().controls; track service; let i = $index) {
+      <div [formGroupName]="i">
+        <div class="form-field">
+          <input type="checkbox"  formControlName="selected"><label>Service: {{servicesPayload.services[i].service}}</label>
+        </div>  
+        <div class="form-field">
+          @if (servicesPayload.services[i].hours_mod === true && service.value.selected === true) {
+            <label>number of hours:</label><input type="number" min="0" formControlName="hours">
+          }
+        </div>
+      </div>
 
-      </div>
-      <div class="form-field">
-        <label>Email:</label>
-        
-        <input id="email" type="text" formControlName="email" required>
-        @if (emailForm.controls['email'].invalid) {
-            <p>Email and is required and must be of the form xxx&#64;xxx.xxx.</p>
-        }
-        
-            
-        
-      <div class="form-field">
-          <label>Adress:</label>
-          <input id="adress" type="text" formControlName="adress" required>
-          
-          @if (emailForm.controls['adress'].invalid) {
-            <p>Adress and is required.</p>
-        }
-        
-        
-      </div>
-     
-      </div>
-  <div class="form-buttons">
-      <button [disabled]="!emailForm.valid" class="button button-primary" (click)="submitEmail()">Send service request email</button>
+    }
+  
+  </div>
+  <div class="form-field">
+    <label>Email:</label>
+    <input id="email" type="text" formControlName="email" required>
+    @if (emailForm.controls['email'].invalid) {
+      <p>Email is required and must be of the form xxx&#64;xxx.xxx.</p>
+    }
+  </div>     
+  <div class="form-field">
+    <label>Name:</label>
+    <input id="name" type="text" formControlName="name" required>
+    @if (emailForm.controls['name'].invalid) {
+      <p>Name and is required.</p>
+    }  
+  </div>
+  <div class="form-field">
+    <label>Description:</label>
+    <textarea id="description" formControlName="description" required></textarea>
+    @if (emailForm.controls['description'].invalid) {
+      <p>Name and is required.</p>
+    }  
+  </div>
+  <div class="submit-button">
+    <button [disabled]="!emailForm.valid" class="button button-primary" (click)="submitEmail()">Send service request email</button>
   </div>
 </form>

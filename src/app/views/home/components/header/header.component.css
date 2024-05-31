@@ -4,6 +4,10 @@ div.header{
     left: 0;
 position: fixed;  
 width: 100%;
-    min-height: 75px;
+min-height: 50px;
     
+    
+}
+p{
+    line-height: 50px;
 }

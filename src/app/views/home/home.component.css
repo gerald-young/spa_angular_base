@@ -1,60 +1,83 @@
 div.main{
     text-align: center;
     display: block;
-    padding-top: 75px;
-    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 65px;
 
 }
 
-div.background{
-    
+div.imgBackground{
+
     background: url('https://gerald-young.github.io/spa_angular_base/assets/serverRoom.jpg');
     background-size: 100vw 200px;  
     width: 100vw;
-    height: 200px;  
+    min-height: 150px;
     background-repeat: no-repeat;
-    min-height: 200px;
     place-content: center;
-    filter: blur(5px); 
+    filter: blur(5px) grayscale(1);
+    
     grid-area: 1 / 1;
     z-index: -2;
 
 
 }
 
-h1.imgText{ 
+p.imgText{ 
     grid-area: 1 / 1;
     z-index: -1;
+    margin: auto;
+    font-size: 27px;
+
 }
 
 div.title{
-   
+  
     font-weight: bold;
-    border: 3px solid #f1f1f1;
+    border: 3px solid #ffffff;
     display: grid;
     place-content: center;
-    align-items: center;
+    height: 150px;
+
 
 }
 
 div.add_copy{
-    min-height: 40vh;
     place-content: center;
+    min-height: 250px;
+    background-color: rgba(69, 195, 145, 0.70);
+    border-radius: 20px;
+    max-width: 90vw;
 
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
 }
-div.submit_form{
 
-    min-height: 40vh;
 
-    place-content: center;
-    
 
-}
-
-li {
-    list-style: none;
-  }
 
   h2 {
 margin:0;
   }
+
+
+  ul{
+    display: inline-block;
+    text-align: left;
+  }
+
+
+
+  div.form{
+    place-content: center;
+    min-height: 250px;
+    background-color: rgba(69, 195, 145, 0.70);
+  
+    border-radius: 20px;
+    max-width: 90vw;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
